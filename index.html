@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div-welcome">
+        <div class="div-welcome-content">
+            <div style="margin-left: 6%; margin-top: 30%">
+                <p style="font-size: 10vh; margin: 0; line-height: 8vh;">Matheus Ferreira</p>
+                <p style="font-size: 4vh; margin: 0; line-height: 4vh;">Full-stack developer</p>
+                <p style="font-size: 4vh; margin: 0; line-height: 4vh;">UI/UX designer</p>
+            </div>
+            
+        </div>
+        <div class="div-welcome-background" id="div-welcome-background">
+                
+        </div>
+    </div>
+    <div class="maskDiv" id="maskDiv" >
+        <svg>
+            <defs>
+                <clipPath id="maskCircle" >
+                    <circle id="circleSvg" cx="2vw" cy="2vh" r="1vw" />
+                </clipPath>
+            </defs>
+        </svg>
+
+        <div class="div-saibaMais">
+
+            <div class="div-saibaMais-content">
+                <div style="margin-left: 6%; margin-top: 30%">
+                    <p style="font-size: 10vh; margin: 0; line-height: 8vh;">Aqui vai ser a seção de serviços!!! </p>
+                    <p style="font-size: 4vh; margin: 0; line-height: 4vh;">Os serviços não aparecenr!!!</p>
+                    <p style="font-size: 4vh; margin: 0; line-height: 4vh;">UI/UX designer</p>
+                </div>
+                
+            </div>
+            <div class="div-saibaMais-background" id="div-saibaMais-background">
+                
+            </div>
+
+        </div>
+    
+        
+    </div>
+
+  
+
+    <section style="height: 200vh">
+
+    </section>
+
+    <section style="height: 200vh">
+
+    </section>
+
+    <section style="height: 200vh">
+
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js" integrity="sha512-R7eFJsc3NlvsTn5hdD/Xvi6FwpFGAoGOa2nBNU89DXAZzXgQQrfhgHVpm5Kh7H9EuCU3Ymexph9z4IiHrq977g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.trunk.min.js" integrity="sha512-htt+cO1Vb7j9o8+1ZKTZXS3JvcvIkKctYUg8MP6w9M8sm/BSJK2buvQCI8JPQt5KMrzuieIFZGjNUTPCcTFrcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js" ></script>
+
+<!-- Seção welcome -->
+<script>
+VANTA.TRUNK({
+  el: "#div-welcome-background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x9908f2,
+  backgroundColor: 0x0,
+  chaos: 1.00
+})
+
+// VANTA.TRUNK({
+//   el: "#div-saibaMais-background",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   scale: 1.00,
+//   scaleMobile: 1.00,
+//   color: 0x9908f2,
+//   backgroundColor: 0xffff,
+//   chaos: 1.00
+// })
+
+
+VANTA.GLOBE({
+  el: "#div-saibaMais-background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 2.00,
+  scaleMobile: 1.00,
+  color: 0xc300ff,
+  color2: 0xcd0c88,
+  backgroundColor: 0x0
+})
+
+
+</script>
+
+<style>
+    body, html{
+        margin: 0;
+    }
+    
+    .div-welcome{
+        background-color: black;
+        width: 100%; 
+        height: 100vh;
+        position: fixed;
+    }
+    
+    
+    .div-welcome-content{
+        z-index: 2;
+        position: absolute; 
+        color: white; 
+        width: 100%; height: 100%;
+    }
+
+    .div-welcome-background{
+        z-index: 1;
+        position: absolute; 
+        color: white; 
+        background-color: black; 
+        width: 100%; 
+        height: 100%;
+    }
+
+</style>
+
+<!-- Seção saibaMais -->
+<style>
+    .maskDiv{
+        width:1000vw;
+        position: fixed; 
+        top: 48vh; 
+        height: 1000vh; 
+        left: 48vw; 
+        z-index: 3; 
+        -webkit-clip-path: url(#maskCircle);
+        transition: 1s;
+        
+    }
+
+    .div-saibaMais{
+        background-color: aqua;
+        position: fixed; 
+        top: 0px;
+        left: 0px; 
+        height: 100vh; 
+        width: 100%; 
+    }
+
+    #circleSvg {
+        transition: 1s;
+    }
+
+    .div-saibaMais-content{
+        z-index: 2;
+        position: absolute; 
+        color: white; 
+        width: 100%; height: 100%;
+    }
+
+    .div-saibaMais-background{
+        z-index: 1;
+        position: absolute; 
+        color: white; 
+        background-color: rgb(97, 97, 97); 
+        width: 100%; 
+        height: 100%;
+    }
+
+</style>
+
+<script>
+    const heightTotal = window.innerHeight;
+    const widthTotal = window.innerWidth;
+    
+    window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+
+    document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
+    document.getElementById("circleSvg").setAttribute("cy", scroll/5 + "vh"); 
+    document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
+    
+    document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
+    document.getElementById("maskDiv").style.top = (50 - (scroll/5)) + "vh";
+    
+    console.log(document.getElementById("circleSvg")) 
+    });
+</script>
+
+</html>
