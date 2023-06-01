@@ -6,19 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+
 <body>
     <div class="div-welcome">
+
         <div class="div-welcome-content">
-            <div style="margin-left: 6%; margin-top: 30%">
-                <p style="font-size: 10vh; margin: 0; line-height: 8vh;">Matheus Ferreira</p>
-                <p style="font-size: 4vh; margin: 0; line-height: 4vh;">Full-stack developer</p>
-                <p style="font-size: 4vh; margin: 0; line-height: 4vh;">UI/UX designer</p>
+            <div style="margin-left: 6%; margin-top: 20%">
+                <p style="font-size: 5vw; margin: 0; margin-bottom: 1vh; line-height: 6vw;">Olá, me chamo</p>
+                <p style="font-size: 20vw; margin: 0; line-height: 17vw; font-weight: 1000;">Matheus Ferreira</p>
+                <p style="font-size: 7vw; margin: 0; margin-top: 3vh; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">Full-stack developer</p>
+                <p style="font-size: 7vw; margin: 0; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">UI/UX designer</p>
             </div>
             
+            <div style="display: flex; justify-content: center; position: fixed; top: 66vh; width: 100%;">
+                <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; color: black">
+                    <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw;">Fale comigo!</p>
+                </div>    
+            </div>
+           
         </div>
-        <div class="div-welcome-background" id="div-welcome-background">
-                
-        </div>
+
+        <div class="div-welcome-background" id="div-welcome-background"></div>
+
     </div>
     <div class="maskDiv" id="maskDiv" >
         <svg>
@@ -32,15 +42,17 @@
         <div class="div-saibaMais">
 
             <div class="div-saibaMais-content">
-                <div style="margin-left: 6%; margin-top: 30%">
-                    <p style="font-size: 10vh; margin: 0; line-height: 8vh;">Aqui vai ser a seção de serviços!!! </p>
-                    <p style="font-size: 4vh; margin: 0; line-height: 4vh;">Os serviços não aparecenr!!!</p>
-                    <p style="font-size: 4vh; margin: 0; line-height: 4vh;">UI/UX designer</p>
+                <div style="margin-left: 6%; margin-top: 15%">
+                    <p style="font-size: 10vh; margin: 0; line-height: 8vh; color: black; font-weight: bold;">Tenha a atenção do seu público!</p>
                 </div>
                 
             </div>
             <div class="div-saibaMais-background" id="div-saibaMais-background">
-                
+                <div style="display: flex; justify-content: center; position: fixed; top: 66vh; width: 100%;">
+                    <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                        <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw; color: #97FF66">Fale comigo!</p>
+                    </div>    
+                </div>
             </div>
 
         </div>
@@ -69,47 +81,35 @@
 
 <!-- Seção welcome -->
 <script>
-VANTA.TRUNK({
+const vantaBG = VANTA.TRUNK({
   el: "#div-welcome-background",
   mouseControls: true,
   touchControls: true,
-  gyroControls: false,
+  gyroControls: true,
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  color: 0x9908f2,
-  backgroundColor: 0x0,
-  chaos: 1.00
+  color: 0x97FF66,
+  backgroundColor: 0x171717,
+  chaos: 4.00,
 })
 
-// VANTA.TRUNK({
-//   el: "#div-saibaMais-background",
-//   mouseControls: true,
-//   touchControls: true,
-//   gyroControls: false,
-//   minHeight: 200.00,
-//   minWidth: 200.00,
-//   scale: 1.00,
-//   scaleMobile: 1.00,
-//   color: 0x9908f2,
-//   backgroundColor: 0xffff,
-//   chaos: 1.00
-// })
+
+vantaBG.resize()
 
 
-VANTA.GLOBE({
-  el: "#div-saibaMais-background",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 2.00,
-  scaleMobile: 1.00,
-  color: 0xc300ff,
-  color2: 0xcd0c88,
-  backgroundColor: 0x0
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    vantaBG.setOptions({chaos: 4 + scroll/50, spacing: scroll/50})
+    vantaBG.resize()
+
+    document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
+    document.getElementById("circleSvg").setAttribute("cy", scroll/5 + "vh"); 
+    document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
+    
+    document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
+    document.getElementById("maskDiv").style.top = (70 - (scroll/5)) + "vh";
 })
 
 
@@ -118,6 +118,7 @@ VANTA.GLOBE({
 <style>
     body, html{
         margin: 0;
+        font-family: 'Rubik';
     }
     
     .div-welcome{
@@ -139,7 +140,8 @@ VANTA.GLOBE({
         z-index: 1;
         position: absolute; 
         color: white; 
-        background-color: black; 
+        background-color: black;
+        padding-top: 40vh; 
         width: 100%; 
         height: 100%;
     }
@@ -151,17 +153,17 @@ VANTA.GLOBE({
     .maskDiv{
         width:1000vw;
         position: fixed; 
-        top: 48vh; 
+        top: 70vh; 
         height: 1000vh; 
-        left: 48vw; 
+        left: 50vw; 
         z-index: 3; 
         -webkit-clip-path: url(#maskCircle);
-        transition: 1s;
+       
         
     }
 
     .div-saibaMais{
-        background-color: aqua;
+        background-color: #97FF66;
         position: fixed; 
         top: 0px;
         left: 0px; 
@@ -170,7 +172,7 @@ VANTA.GLOBE({
     }
 
     #circleSvg {
-        transition: 1s;
+      
     }
 
     .div-saibaMais-content{
@@ -180,14 +182,6 @@ VANTA.GLOBE({
         width: 100%; height: 100%;
     }
 
-    .div-saibaMais-background{
-        z-index: 1;
-        position: absolute; 
-        color: white; 
-        background-color: rgb(97, 97, 97); 
-        width: 100%; 
-        height: 100%;
-    }
 
 </style>
 
@@ -195,18 +189,17 @@ VANTA.GLOBE({
     const heightTotal = window.innerHeight;
     const widthTotal = window.innerWidth;
     
+    //ABRIR O CIRCULO
     window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
 
-    document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
-    document.getElementById("circleSvg").setAttribute("cy", scroll/5 + "vh"); 
-    document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
-    
-    document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
-    document.getElementById("maskDiv").style.top = (50 - (scroll/5)) + "vh";
+   
     
     console.log(document.getElementById("circleSvg")) 
     });
+
+    
+
 </script>
 
 </html>
