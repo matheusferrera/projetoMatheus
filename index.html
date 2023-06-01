@@ -34,7 +34,7 @@
         <svg>
             <defs>
                 <clipPath id="maskCircle" >
-                    <circle id="circleSvg" cx="2vw" cy="2vh" r="1vw" />
+                    <circle id="circleSvg" cx="0" cy="0" r="0" />
                 </clipPath>
             </defs>
         </svg>
@@ -92,16 +92,15 @@ const vantaBG = VANTA.TRUNK({
   scaleMobile: 1.00,
   color: 0x97FF66,
   backgroundColor: 0x171717,
-  chaos: 4.00,
+  chaos: 2.00,
 })
 
 
 vantaBG.resize()
 
-
-window.addEventListener("scroll", (event) => {
+setInterval(function() {
     let scroll = this.scrollY;
-    vantaBG.setOptions({chaos: 4 + scroll/50, spacing: scroll/50})
+    vantaBG.setOptions({chaos: 2 + scroll/30, spacing: scroll/50})
     vantaBG.resize()
 
     document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
@@ -110,7 +109,8 @@ window.addEventListener("scroll", (event) => {
     
     document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
     document.getElementById("maskDiv").style.top = (70 - (scroll/5)) + "vh";
-})
+}, 20);
+
 
 
 </script>
