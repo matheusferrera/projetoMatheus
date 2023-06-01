@@ -40,12 +40,23 @@
         </svg>
 
         <div class="div-saibaMais">
-
+    
             <div class="div-saibaMais-content">
-                <div style="margin-left: 6%; margin-top: 15%">
-                    <p style="font-size: 10vh; margin: 0; line-height: 8vh; color: black; font-weight: bold;">Tenha a atenção do seu público!</p>
+                <div style="display: flex; justify-content: center">
+                    <div style="width: 100%; margin-top: 10vw">
+                        <p style="font-size: 10vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 10vw;">Não crio sites</p>
+                        <p style="font-size: 10vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 10vw;">Crio conexões entre</p>
+                        <p style="font-size: 10vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 10vw;"><u>Você e seu cliente!</u></p>
+                    </div>
+                   
+                    <p style="position: absolute; z-index: 2; top: 30vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
+                    <p style="position: absolute; z-index: 2; top: 45vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
+                    <p style="position: absolute; z-index: 2; top: 60vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">seu cliente Chame atenção</p>
+                    <p style="position: absolute; z-index: 2; top: 75vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">atenção do seu cliente</p>
+                    <p style="position: absolute; z-index: 2; top: 90vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">seu cliente Chame atenção</p>
+                    <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 30vw; opacity: 1"></canvas>
                 </div>
-                
+
             </div>
             <div class="div-saibaMais-background" id="div-saibaMais-background">
                 <div style="display: flex; justify-content: center; position: fixed; top: 66vh; width: 100%;">
@@ -79,6 +90,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.trunk.min.js" integrity="sha512-htt+cO1Vb7j9o8+1ZKTZXS3JvcvIkKctYUg8MP6w9M8sm/BSJK2buvQCI8JPQt5KMrzuieIFZGjNUTPCcTFrcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js" ></script>
 
+<script src="https://unpkg.com/@rive-app/canvas@1.0.102"></script>
+
 <!-- Seção welcome -->
 <script>
 const vantaBG = VANTA.TRUNK({
@@ -92,7 +105,7 @@ const vantaBG = VANTA.TRUNK({
   scaleMobile: 1.00,
   color: 0x97FF66,
   backgroundColor: 0x171717,
-  chaos: 2.00,
+  chaos: -2.00,
 })
 
 
@@ -111,6 +124,12 @@ setInterval(function() {
     document.getElementById("maskDiv").style.top = (70 - (scroll/5)) + "vh";
 }, 20);
 
+
+new rive.Rive({
+        src: "cortadito.riv",
+        canvas: document.getElementById("canvas"),
+        autoplay: true
+    });
 
 
 </script>
