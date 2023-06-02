@@ -20,9 +20,9 @@
                 <p style="font-size: 7vw; margin: 0; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">UI/UX designer</p>
             </div>
             
-            <div style="display: flex; justify-content: center; position: fixed; top: 80vh; width: 100%;">
+            <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
                 <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; color: black">
-                    <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw; font-weight: bold;">Fale comigo!</p>
+                    <p style="font-size: 7vw; line-height: 4vw; font-weight: bold;">Fale comigo!</p>
                 </div>    
             </div>
            
@@ -44,21 +44,21 @@
     
             <div class="div-saibaMais-content">
                 <div style="display: flex; justify-content: center">
-                    <div style="width: 100%; margin-top: 15vh">
+                    <div style="width: 100%; margin-top: 10vh">
                         <p style="font-size: 30vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 25vw; font-family: unique;">não crio sites</p>
                         <p style="font-size: 30vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 25vw; font-family: unique">crio rodutos</p>
                     </div>
                    
-                    <p style="font-family: unique; position: absolute; z-index: 2; top: 30vh; color: #bcff9d; font-size: 30vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
-                    <p style="font-family: unique; position: absolute; z-index: 2; top: 50vh; color: #bcff9d; font-size: 30vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
-                     <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 30vh; opacity: 1"></canvas>
+                    <p id="text-canva1" class="text-canva" style="top: 23vh;">Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
+                    <p id="text-canva2" class="text-canva" style="top: 43vh; ">o seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
+                     <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 23vh; opacity: 1"></canvas>
                 </div>
 
             </div>
             <div class="div-saibaMais-background" id="div-saibaMais-background">
-                <div style="display: flex; justify-content: center; position: fixed; top: 80vh; width: 100%;">
+                <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
                     <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
-                        <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw; color: #97FF66">Fale comigo!</p>
+                        <p style="font-size: 7vw; line-height: 4vw; color: #97FF66; font-weight: bold;">Fale comigo!</p>
                     </div>    
                 </div>
             </div>
@@ -112,14 +112,21 @@ setInterval(function() {
     let scroll = this.scrollY;
     vantaBG.setOptions({chaos: 2 + scroll/30, spacing: scroll/50})
     vantaBG.resize()
+    
 
+    //ajustar abertura do circulo da primeira pagina
     document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
     document.getElementById("circleSvg").setAttribute("cy", scroll/5 + "vh"); 
     document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
     
     document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
-    document.getElementById("maskDiv").style.top = (84 - (scroll/5)) + "vh";
-}, 20);
+    document.getElementById("maskDiv").style.top = (80 - (scroll/5)) + "vh";
+
+
+    //animação de letras atrás do canva
+    document.getElementById("text-canva1").style.paddingLeft = (scroll/10) + "vw";
+    document.getElementById("text-canva2").style.paddingLeft = (scroll/5) + "vw";
+}, 10);
 
 
 new rive.Rive({
@@ -157,7 +164,7 @@ new rive.Rive({
         position: absolute; 
         color: white; 
         background-color: black;
-        padding-top: 70vh; 
+        padding-top: 60vh; 
         width: 100%; 
         height: 100%;
     }
@@ -196,6 +203,16 @@ new rive.Rive({
         position: absolute; 
         color: white; 
         width: 100%; height: 100%;
+    }
+
+    .text-canva{
+        font-family: unique;
+        position: absolute; 
+        z-index: 2;  
+        color: #bcff9d; 
+        font-size: 30vw; 
+        width: max-content; 
+        transition: 1s;
     }
 
 
