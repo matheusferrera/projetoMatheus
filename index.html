@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
 </head>
 <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
-
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
 <body>
     <div class="div-welcome">
 
@@ -19,9 +20,9 @@
                 <p style="font-size: 7vw; margin: 0; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">UI/UX designer</p>
             </div>
             
-            <div style="display: flex; justify-content: center; position: fixed; top: 66vh; width: 100%;">
+            <div style="display: flex; justify-content: center; position: fixed; top: 80vh; width: 100%;">
                 <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; color: black">
-                    <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw;">Fale comigo!</p>
+                    <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw; font-weight: bold;">Fale comigo!</p>
                 </div>    
             </div>
            
@@ -43,23 +44,19 @@
     
             <div class="div-saibaMais-content">
                 <div style="display: flex; justify-content: center">
-                    <div style="width: 100%; margin-top: 10vw">
-                        <p style="font-size: 10vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 10vw;">Não crio sites</p>
-                        <p style="font-size: 10vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 10vw;">Crio conexões entre</p>
-                        <p style="font-size: 10vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 10vw;"><u>Você e seu cliente!</u></p>
+                    <div style="width: 100%; margin-top: 15vh">
+                        <p style="font-size: 30vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 25vw; font-family: unique;">não crio sites</p>
+                        <p style="font-size: 30vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 25vw; font-family: unique">crio rodutos</p>
                     </div>
                    
-                    <p style="position: absolute; z-index: 2; top: 30vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
-                    <p style="position: absolute; z-index: 2; top: 45vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
-                    <p style="position: absolute; z-index: 2; top: 60vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">seu cliente Chame atenção</p>
-                    <p style="position: absolute; z-index: 2; top: 75vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">atenção do seu cliente</p>
-                    <p style="position: absolute; z-index: 2; top: 90vw; color: #bcff9d; font-size: 20vw; width: max-content; font-weight: lighter;">seu cliente Chame atenção</p>
-                    <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 30vw; opacity: 1"></canvas>
+                    <p style="font-family: unique; position: absolute; z-index: 2; top: 30vh; color: #bcff9d; font-size: 30vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
+                    <p style="font-family: unique; position: absolute; z-index: 2; top: 50vh; color: #bcff9d; font-size: 30vw; width: max-content; font-weight: lighter;">Chame atenção do seu cliente</p>
+                     <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 30vh; opacity: 1"></canvas>
                 </div>
 
             </div>
             <div class="div-saibaMais-background" id="div-saibaMais-background">
-                <div style="display: flex; justify-content: center; position: fixed; top: 66vh; width: 100%;">
+                <div style="display: flex; justify-content: center; position: fixed; top: 80vh; width: 100%;">
                     <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
                         <p style="font-weight: 8000; font-size: 7vw; line-height: 4vw; color: #97FF66">Fale comigo!</p>
                     </div>    
@@ -121,7 +118,7 @@ setInterval(function() {
     document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
     
     document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
-    document.getElementById("maskDiv").style.top = (70 - (scroll/5)) + "vh";
+    document.getElementById("maskDiv").style.top = (84 - (scroll/5)) + "vh";
 }, 20);
 
 
@@ -160,7 +157,7 @@ new rive.Rive({
         position: absolute; 
         color: white; 
         background-color: black;
-        padding-top: 40vh; 
+        padding-top: 70vh; 
         width: 100%; 
         height: 100%;
     }
@@ -172,7 +169,7 @@ new rive.Rive({
     .maskDiv{
         width:1000vw;
         position: fixed; 
-        top: 70vh; 
+        top: 90vh; 
         height: 1000vh; 
         left: 50vw; 
         z-index: 3; 
