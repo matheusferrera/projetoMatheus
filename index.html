@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <title>Matheus F.</title>
 </head>
 <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+
+<link rel="stylesheet" href="fonts/stylesheet.css">
+
+<link rel="stylesheet" href="welcome/welcome.css">
+<link rel="stylesheet" href="saibaMais/saibaMais.css">
+
 <body>
     <div class="div-welcome">
 
@@ -45,13 +50,17 @@
             <div class="div-saibaMais-content">
                 <div style="display: flex; justify-content: center">
                     <div style="width: 100%; margin-top: 10vh">
-                        <p style="font-size: 30vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 25vw; font-family: unique;">não crio sites</p>
-                        <p style="font-size: 30vw; color: black; margin:0; text-align: center;font-weight: bold; line-height: 25vw; font-family: unique">crio rodutos</p>
+                        <p class="p1-saibaMais">Não crio somente sites,</p>
+
+                        <div class='console-container'>
+                            <span id='text'></span>
+                            <div class='console-underscore' id='console'>|</div>
+                        </div>
+                        
                     </div>
                    
-                    <p id="text-canva1" class="text-canva" style="top: 23vh;">Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
-                    <p id="text-canva2" class="text-canva" style="top: 43vh; ">o seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
-                     <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 23vh; opacity: 1"></canvas>
+                    <p id="text-canva1" class="text-canva" >Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
+                    <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 23vh; opacity: 1"></canvas>
                 </div>
 
             </div>
@@ -89,150 +98,17 @@
 
 <script src="https://unpkg.com/@rive-app/canvas@1.0.102"></script>
 
-<!-- Seção welcome -->
-<script>
-const vantaBG = VANTA.TRUNK({
-  el: "#div-welcome-background",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: true,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x97FF66,
-  backgroundColor: 0x171717,
-  chaos: -2.00,
-})
 
 
-vantaBG.resize()
+<script src="welcome/welcome.js" ></script>
+<script src="saibaMais/saibaMais.js" ></script>
 
-setInterval(function() {
-    let scroll = this.scrollY;
-    vantaBG.setOptions({chaos: 2 + scroll/30, spacing: scroll/50})
-    vantaBG.resize()
-    
-
-    //ajustar abertura do circulo da primeira pagina
-    document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
-    document.getElementById("circleSvg").setAttribute("cy", scroll/5 + "vh"); 
-    document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
-    
-    document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
-    document.getElementById("maskDiv").style.top = (80 - (scroll/5)) + "vh";
-
-
-    //animação de letras atrás do canva
-    document.getElementById("text-canva1").style.paddingLeft = (scroll/10) + "vw";
-    document.getElementById("text-canva2").style.paddingLeft = (scroll/5) + "vw";
-}, 10);
-
-
-new rive.Rive({
-        src: "cortadito.riv",
-        canvas: document.getElementById("canvas"),
-        autoplay: true
-    });
-
-
-</script>
 
 <style>
     body, html{
         margin: 0;
         font-family: 'Rubik';
     }
-    
-    .div-welcome{
-        background-color: black;
-        width: 100%; 
-        height: 100vh;
-        position: fixed;
-    }
-    
-    
-    .div-welcome-content{
-        z-index: 2;
-        position: absolute; 
-        color: white; 
-        width: 100%; height: 100%;
-    }
-
-    .div-welcome-background{
-        z-index: 1;
-        position: absolute; 
-        color: white; 
-        background-color: black;
-        padding-top: 60vh; 
-        width: 100%; 
-        height: 100%;
-    }
-
 </style>
-
-<!-- Seção saibaMais -->
-<style>
-    .maskDiv{
-        width:1000vw;
-        position: fixed; 
-        top: 90vh; 
-        height: 1000vh; 
-        left: 50vw; 
-        z-index: 3; 
-        -webkit-clip-path: url(#maskCircle);
-       
-        
-    }
-
-    .div-saibaMais{
-        background-color: #97FF66;
-        position: fixed; 
-        top: 0px;
-        left: 0px; 
-        height: 100vh; 
-        width: 100%; 
-    }
-
-    #circleSvg {
-      
-    }
-
-    .div-saibaMais-content{
-        z-index: 2;
-        position: absolute; 
-        color: white; 
-        width: 100%; height: 100%;
-    }
-
-    .text-canva{
-        font-family: unique;
-        position: absolute; 
-        z-index: 2;  
-        color: #bcff9d; 
-        font-size: 30vw; 
-        width: max-content; 
-        transition: 1s;
-    }
-
-
-</style>
-
-<script>
-    const heightTotal = window.innerHeight;
-    const widthTotal = window.innerWidth;
-    
-    //ABRIR O CIRCULO
-    window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-
-   
-    
-    console.log(document.getElementById("circleSvg")) 
-    });
-
-    
-
-</script>
 
 </html>

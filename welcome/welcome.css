@@ -1,0 +1,24 @@
+.div-welcome{
+    background-color: black;
+    width: 100%; 
+    height: 100vh;
+    position: fixed;
+}
+
+
+.div-welcome-content{
+    z-index: 2;
+    position: absolute; 
+    color: white; 
+    width: 100%; height: 100%;
+}
+
+.div-welcome-background{
+    z-index: 1;
+    position: absolute; 
+    color: white; 
+    background-color: black;
+    padding-top: 60vh; 
+    width: 100%; 
+    height: 100%;
+}
