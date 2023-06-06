@@ -6,7 +6,7 @@
         let scroll = this.scrollY;
  
         //animação de letras atrás do canva
-        document.getElementById("text-canva1").style.paddingLeft = (scroll) + "vw";
+        document.getElementById("text-canva1").style.paddingRight = (scroll) + "vw";
     }, 10);
 
     //Escrever palavras saibaMais
