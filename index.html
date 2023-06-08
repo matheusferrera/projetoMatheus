@@ -13,84 +13,150 @@
 
 <link rel="stylesheet" href="welcome/welcome.css">
 <link rel="stylesheet" href="saibaMais/saibaMais.css">
+<link rel="stylesheet" href="servicos/servicos.css">
+
 
 <body>
-    <div class="div-welcome">
-
-        <div class="div-welcome-content">
-            <div style="margin-left: 6%; margin-top: 20%">
-                <p style="font-size: 5vw; margin: 0; margin-bottom: 1vh; line-height: 6vw;">Olá, me chamo</p>
-                <p style="font-size: 20vw; margin: 0; line-height: 17vw; font-weight: 1000;">Matheus Ferreira</p>
-                <p style="font-size: 7vw; margin: 0; margin-top: 3vh; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">Full-stack developer</p>
-                <p style="font-size: 7vw; margin: 0; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">UI/UX designer</p>
-            </div>
-            
+    <div id="load-content" style="transition: 2s; z-index: 10; background-color: #97FF66; width: 100%; height: 100vh; display: solid; position: fixed; top: 0">
+            <h1 style="text-align: center;">Carregando ...</h1>
             <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
-                <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; color: black">
-                    <p style="font-size: 7vw; line-height: 4vw; font-weight: bold;">Fale comigo!</p>
+                <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                    <p style="font-size: 7vw; line-height: 4vw; color: #97FF66; font-weight: bold;">Fale comigo!</p>
                 </div>    
             </div>
-           
-        </div>
-
-        <div class="div-welcome-background" id="div-welcome-background"></div>
-
     </div>
-    <div class="maskDiv" id="maskDiv" >
-        <svg>
-            <defs>
-                <clipPath id="maskCircle" >
-                    <circle id="circleSvg" cx="0" cy="0" r="0" />
-                </clipPath>
-            </defs>
-        </svg>
 
-        <div class="div-saibaMais">
     
-            <div class="div-saibaMais-content">
-                <div style="display: flex; justify-content: center">
-                    <div style="width: 100%; margin-top: 10vh">
-                        <p class="p1-saibaMais">Não crio somente sites,</p>
-
-                        <div class='console-container'>
-                            <span id='text'></span>
-                            <div class='console-underscore' id='console'>|</div>
-                        </div>
-                        
-                    </div>
-                   
-                    <p id="text-canva1" class="text-canva" >Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
-                    <canvas id="canvas" width="500" height="500" style="position: absolute; z-index: 2; top: 23vh; opacity: 1"></canvas>
+    <div id="all-content" >
+        <div class="div-welcome">
+    
+            <div class="div-welcome-content">
+                <div style="margin-left: 6%; margin-top: 20%">
+                    <p style="font-size: 5vw; margin: 0; margin-bottom: 1vh; line-height: 6vw;">Olá, me chamo</p>
+                    <p style="font-size: 20vw; margin: 0; line-height: 17vw; font-weight: 1000;">Matheus Ferreira</p>
+                    <p style="font-size: 7vw; margin: 0; margin-top: 3vh; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">Full-stack developer</p>
+                    <p style="font-size: 7vw; margin: 0; line-height: 6vw; color: rgb(165, 165, 165); font-weight: 1000;">UI/UX designer</p>
                 </div>
-
-            </div>
-            <div class="div-saibaMais-background" id="div-saibaMais-background">
+                
                 <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
-                    <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
-                        <p style="font-size: 7vw; line-height: 4vw; color: #97FF66; font-weight: bold;">Fale comigo!</p>
+                    <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                        <p style="font-size: 7vw; line-height: 4vw; color: #171717; font-weight: bold;">Fale comigo!</p>
                     </div>    
                 </div>
+               
             </div>
-
+    
+            <div class="div-welcome-background" id="div-welcome-background"></div>
+    
         </div>
     
+        <div class="maskDiv-saibaMais" id="maskDiv-saibaMais" >
+            <svg>
+                <defs>
+                    <clipPath id="maskCircle-saibaMais" >
+                        <circle id="circleSvg-saibaMais" cx="0" cy="0" r="0" />
+                    </clipPath>
+                </defs>
+            </svg>
+    
+            <div class="div-saibaMais">
         
+                <div class="div-saibaMais-content">
+                    <div style="display: flex; justify-content: center">
+                        <div style="width: 100%; margin-top: 10vh">
+                            <p class="p1-saibaMais">Não crio somente sites,</p>
+    
+                            <div class='console-container'>
+                                <span id='text'></span>
+                                <div class='console-underscore' id='console'>|</div>
+                            </div>
+                            
+                        </div>
+                       
+                        <p id="text-canva1" class="text-canva" >Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente, Chame atenção do seu cliente</p>
+                        <canvas id="canvas" width="390" height="500" style="position: absolute; z-index: 2; top: 20vh; opacity: 1"></canvas>
+                    </div>
+                    
+                    <div style="color: white; position: absolute; top: 87vh; display: flex; flex-direction: column; justify-content: center; width: 100%;">
+                        <a style="margin-left: 50%;">
+                            <div class="scrollDownPreto">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                        </a>
+                          <p style="color: #030303; text-align: center; width: 100%; margin-top: 5vh;">Continue rolando e veja todos o serviços....</p>
+                    </div>
+    
+                </div>
+                <div class="div-saibaMais-background" id="div-saibaMais-background">
+                    <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
+                        <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                            <p style="font-size: 7vw; line-height: 4vw; color: #97FF66; font-weight: bold;">Fale comigo!</p>
+                        </div>    
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="maskDiv-servicos" id="maskDiv-servicos" >
+                <svg>
+                    <defs>
+                        <clipPath id="maskCircle-servicos" >
+                            <circle id="circleSvg-servicos" cx="50vw" cy="50vw" r="48vw" />
+                        </clipPath>
+                    </defs>
+                </svg>
+        
+                <div class="div-servicos">
+                    <h1>Servicos</h1>
+                    
+                    <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
+                        <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                            <p style="font-size: 7vw; line-height: 4vw; color: #171717; font-weight: bold;">Fale comigo!</p>
+                        </div>    
+                    </div>
+    
+                    <div style="color: white; position: absolute; top: 87vh; display: flex; flex-direction: column; justify-content: center; width: 100%;">
+                        <a style="margin-left: 50%;">
+                            <div class="scrollDownVerde">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                        </a>
+                          <p style="color: #ffffff; text-align: center; width: 100%; margin-top: 5vh;">Continue rolando e veja todos o serviços....</p>
+                    </div>
+                    
+                </div>
+        
+            </div>
+    
+        </div>
+    
+       
+    
+    
+    
+      
+    
+        <section style="height: 200vh">
+    
+        </section>
+    
+        <section style="height: 200vh">
+    
+        </section>
+    
+        <section style="height: 200vh">
+    
+        </section>
     </div>
 
-  
-
-    <section style="height: 200vh">
-
-    </section>
-
-    <section style="height: 200vh">
-
-    </section>
-
-    <section style="height: 200vh">
-
-    </section>
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js" integrity="sha512-R7eFJsc3NlvsTn5hdD/Xvi6FwpFGAoGOa2nBNU89DXAZzXgQQrfhgHVpm5Kh7H9EuCU3Ymexph9z4IiHrq977g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.trunk.min.js" integrity="sha512-htt+cO1Vb7j9o8+1ZKTZXS3JvcvIkKctYUg8MP6w9M8sm/BSJK2buvQCI8JPQt5KMrzuieIFZGjNUTPCcTFrcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -102,7 +168,7 @@
 
 <script src="welcome/welcome.js" ></script>
 <script src="saibaMais/saibaMais.js" ></script>
-
+<script src="servicos/servicos.js" ></script>
 
 <style>
     body, html{
@@ -110,5 +176,12 @@
         font-family: 'Rubik';
     }
 </style>
+
+<script>
+    let opc = 1
+    $(window).on("load", function(){
+        document.getElementById('load-content').style.opacity = 0
+    });
+</script>
 
 </html>

@@ -24,20 +24,14 @@ const vantaBG = VANTA.TRUNK({
       
   
       //ajustar abertura do circulo da primeira pagina
-      document.getElementById("circleSvg").setAttribute("cx", scroll/5 + "vw"); 
-      document.getElementById("circleSvg").setAttribute("cy", scroll/5 + "vh"); 
-      document.getElementById("circleSvg").setAttribute("r", scroll/10 + "vw"); 
+      document.getElementById("circleSvg-saibaMais").setAttribute("cx", scroll/5 + "vw"); 
+      document.getElementById("circleSvg-saibaMais").setAttribute("cy", scroll/5 + "vh"); 
+      document.getElementById("circleSvg-saibaMais").setAttribute("r", scroll/10 + "vw"); 
       
-      document.getElementById("maskDiv").style.left = (50 - (scroll/5)) + "vw";
-      document.getElementById("maskDiv").style.top = (80 - (scroll/5)) + "vh";
+      document.getElementById("maskDiv-saibaMais").style.left = (50 - (scroll/5)) + "vw";
+      document.getElementById("maskDiv-saibaMais").style.top = (80 - (scroll/5)) + "vh";
   
 
   }, 10);
-  
-  
-  new rive.Rive({
-          src: "cortadito.riv",
-          canvas: document.getElementById("canvas"),
-          autoplay: true
-      });
+
   
