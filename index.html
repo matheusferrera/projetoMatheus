@@ -17,10 +17,16 @@
 
 
 <body>
+    <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%; z-index: 11" onclick="window.open('https://wa.me/+5561982501719', '_blank')">
+        <div style="background-color: red; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; cursor: pointer; opacity: 0">
+            <p style="font-size: 7vw; line-height: 4vw; color: #171717; font-weight: bold;">Fale comigo!</p>
+        </div>    
+    </div>
+
     <div id="load-content" style="transition: 5s; z-index: 10; background-color: #97FF66; width: 100%; height: 100vh; display: solid; position: fixed; top: 0">
-            <h1 style="text-align: center;">Carregando ...</h1>
+            <h1 style="text-align: center; margin-top: 80%">Carregando ...</h1>
             <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
-                <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; cursor: pointer;">
                     <p style="font-size: 7vw; line-height: 4vw; color: #97FF66; font-weight: bold;">Fale comigo!</p>
                 </div>    
             </div>
@@ -41,7 +47,7 @@
                 </div>
                 
                 <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
-                    <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                    <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; cursor: pointer">
                         <p style="font-size: 7vw; line-height: 4vw; color: #171717; font-weight: bold;">Fale comigo!</p>
                     </div>    
                 </div>
@@ -94,7 +100,7 @@
                 </div>
                 <div class="div-saibaMais-background" id="div-saibaMais-background">
                     <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
-                        <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                        <div style="background-color: #171717; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; cursor: pointer;">
                             <p style="font-size: 7vw; line-height: 4vw; color: #97FF66; font-weight: bold;">Fale comigo!</p>
                         </div>    
                     </div>
@@ -125,7 +131,7 @@
                     
                     
                     <div style="display: flex; justify-content: center; position: fixed; top: 75vh; width: 100%;">
-                        <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px;">
+                        <div style="background-color: #97FF66; width: fit-content; padding: 1px 20px 1px 20px; border-radius: 25px; cursor: pointer;">
                             <p style="font-size: 7vw; line-height: 4vw; color: #171717; font-weight: bold;">Fale comigo!</p>
                         </div>    
                     </div>
@@ -195,6 +201,11 @@
 
     $(window).on("load", function(){
         document.getElementById('load-content').style.opacity = 0
+
+        setTimeout(function(){ 
+            document.getElementById('load-content').style.display = 'none'
+        }, 6000);
+
     });
 </script>
 
