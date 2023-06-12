@@ -1,14 +1,16 @@
     const heightTotal = window.innerHeight;
     const widthTotal = window.innerWidth;
     
-    //Eventos de scroll
-    setInterval(function() {
+    function animacaoSaiba(){
         let scroll = this.scrollY;
  
-
-    //animação de letras atrás do canva
+        //animação de letras atrás do canva
         document.getElementById("text-canva1").style.paddingRight = (scroll) + "vw";
-    }, 10);
+
+        requestAnimationFrame(animacaoSaiba);
+    }
+    
+    requestAnimationFrame(animacaoSaiba);
 
     //criação do rive
     // const r = new rive.Rive({

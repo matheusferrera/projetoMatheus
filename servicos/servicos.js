@@ -1,6 +1,4 @@
-
-setInterval(function() {
-    
+function animacaoServ(){
 
     let scroll = this.scrollY;
     console.log(scroll)
@@ -26,5 +24,7 @@ setInterval(function() {
         document.getElementById("maskDiv-servicos").style.top = "85vh";
     }
 
+    requestAnimationFrame(animacaoServ);
+}
 
-}, 10);
+requestAnimationFrame(animacaoServ);
