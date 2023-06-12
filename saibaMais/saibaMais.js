@@ -1,32 +1,19 @@
-    const heightTotal = window.innerHeight;
-    const widthTotal = window.innerWidth;
-    
-    function animacaoSaiba(){
-        let scroll = this.scrollY;
- 
-        //animação de letras atrás do canva
-        document.getElementById("text-canva1").style.paddingRight = (scroll) + "vw";
+const heightTotal = window.innerHeight;
+const widthTotal = window.innerWidth;
+const textCanva1 = document.querySelector("#text-canva1");
+const consoleTextTarget = document.getElementById("text");
 
-        requestAnimationFrame(animacaoSaiba);
-    }
-    
+function animacaoSaiba() {
+    const scroll = window.scrollY;
+
+    // Animação de letras atrás do canvas
+    textCanva1.style.paddingRight = scroll + "vw";
+
     requestAnimationFrame(animacaoSaiba);
+}
 
-    //criação do rive
-    // const r = new rive.Rive({
-    //         src: "blog_bot.riv",
-    //         canvas: document.getElementById("canvas"),
-    //         autoplay: true,
-    //         stateMachines: "State Machine 1",
-    //         onLoad: () => {  
-    //             // Get the inputs via the name of the state machine
-    //             const inputs = r.stateMachineInputs('State Machine 1');
-    //             const TriggerLimited = inputs.find(i => i.name === 'isLimited');
-    //             const TriggerVisible = inputs.find(i => i.name === 'isVisible');
-    //             TriggerLimited.value = false;
-    //             TriggerVisible.value = true;
-    //         }
-    //     });
+requestAnimationFrame(animacaoSaiba);
+
 
     //Escrever palavras saibaMais
     consoleText(['Crio experiências', 'Crio sentimentos', 'Crio conexões', 'Crio clientes', 'Crio obras de arte'], 'text',['black']);

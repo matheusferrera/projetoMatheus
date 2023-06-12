@@ -22,9 +22,17 @@
     left: 0vw;
     z-index: 4; 
     -webkit-clip-path: url(#maskCircle-servicos);
-    
-    
 }
+
+
+.active-servico {
+	color: #97FF66 !important;
+	font-size: 2rem !important;
+  }
+  
+  .active-servico-text {
+	opacity: 1 !important;
+  }
 
 
 .scrollDownVerde span {
