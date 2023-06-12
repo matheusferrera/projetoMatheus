@@ -11,20 +11,20 @@
     }, 10);
 
     //criação do rive
-    const r = new rive.Rive({
-            src: "blog_bot.riv",
-            canvas: document.getElementById("canvas"),
-            autoplay: true,
-            stateMachines: "State Machine 1",
-            onLoad: () => {  
-                // Get the inputs via the name of the state machine
-                const inputs = r.stateMachineInputs('State Machine 1');
-                const TriggerLimited = inputs.find(i => i.name === 'isLimited');
-                const TriggerVisible = inputs.find(i => i.name === 'isVisible');
-                TriggerLimited.value = false;
-                TriggerVisible.value = true;
-            }
-        });
+    // const r = new rive.Rive({
+    //         src: "blog_bot.riv",
+    //         canvas: document.getElementById("canvas"),
+    //         autoplay: true,
+    //         stateMachines: "State Machine 1",
+    //         onLoad: () => {  
+    //             // Get the inputs via the name of the state machine
+    //             const inputs = r.stateMachineInputs('State Machine 1');
+    //             const TriggerLimited = inputs.find(i => i.name === 'isLimited');
+    //             const TriggerVisible = inputs.find(i => i.name === 'isVisible');
+    //             TriggerLimited.value = false;
+    //             TriggerVisible.value = true;
+    //         }
+    //     });
 
     //Escrever palavras saibaMais
     consoleText(['Crio experiências', 'Crio sentimentos', 'Crio conexões', 'Crio clientes', 'Crio obras de arte'], 'text',['black']);

@@ -9,6 +9,11 @@
     
 }
 
+.div-servicos-content{
+	margin-left: 6%;
+	margin-top: 10%;
+}
+
 .maskDiv-servicos{
     width:1000vw;
     position: fixed; 
