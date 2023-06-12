@@ -13,8 +13,6 @@ const vantaBG = VANTA.TRUNK({
   })
   
   
-  vantaBG.resize()
-  
   
   //Eventos de scroll
   setInterval(function() {
