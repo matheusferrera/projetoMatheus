@@ -46,7 +46,6 @@
                     </div>    
                 </div>
 
-                <button onclick="forceRefresh()">Atualizar</button>
                
             </div>
     
@@ -114,12 +113,13 @@
         
                 <div class="div-servicos">
                     <div class="div-servicos-content">
-                        <p id="servico1" style="color: #97FF66; font-size: 2rem; font-weight: 1000; margin: 0">Criação de sites</p>
-                        <p style="color: grey; font-size: 1.5rem; font-weight: 1000; margin: 0">Criação de app's</p>
-                        <p style="color: grey; font-size: 1.5rem; font-weight: 1000; margin: 0">Consultoria</p>
+                        <p id="servico1" style="color: grey; font-size: 1.5rem; font-weight: 1000; margin: 0; transition: 1s">Criação de sites</p>
+                        <p id="servico2" style="color: grey; font-size: 1.5rem; font-weight: 1000; margin: 0; transition: 1s">Criação de app's</p>
+                        <p id="servico3" style="color: grey; font-size: 1.5rem; font-weight: 1000; margin: 0; transition: 1s">Consultoria</p>
                         <div class="div-servicos-subContent" style="margin-top: 20%; width: 94%">
-                            <p style="color: white; font-size: 2.5rem;">Crie sites profissionais, com funções incriveis e escolhidas a dedo por você.</p>
-                            
+                            <p id="servico1-text" style="color: white; font-size: 2.5rem; transition: 1s; height: 0; margin: 0; opacity: 0">Crie sites profissionais, com funções incriveis e escolhidas a dedo por você.</p>
+                            <p id="servico2-text" style="color: white; font-size: 2.5rem; transition: 1s; height: 0; margin: 0; opacity: 0">Crie app's especificos para sua demanda.</p>
+                            <p id="servico3-text" style="color: white; font-size: 2.5rem; transition: 1s; height: 0; margin: 0; opacity: 0">Tem alguma dúvida relacionado a tecnologia que deseja sanar? fale comigo</p>
                         </div>
                     </div>
                     
@@ -195,8 +195,6 @@
 
     $(window).on("load", function(){
         document.getElementById('load-content').style.opacity = 0
-        document.visibilityState = "visible"
-        window.innerWidth = screen.width
     });
 </script>
 
