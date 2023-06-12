@@ -45,6 +45,8 @@
                         <p style="font-size: 7vw; line-height: 4vw; color: #171717; font-weight: bold;">Fale comigo!</p>
                     </div>    
                 </div>
+
+                <button onclick="forceRefresh()">Atualizar</button>
                
             </div>
     
@@ -190,9 +192,11 @@
 
 <script>
     let opc = 1
+
     $(window).on("load", function(){
         document.getElementById('load-content').style.opacity = 0
-        reload();
+        document.visibilityState = "visible"
+        window.innerWidth = screen.width
     });
 </script>
 
