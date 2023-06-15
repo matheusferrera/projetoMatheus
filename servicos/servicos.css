@@ -11,7 +11,7 @@
 
 .div-servicos-content{
 	margin-left: 6%;
-	margin-top: 10%;
+	margin-top: 8vh;
 }
 
 .maskDiv-servicos{
@@ -23,12 +23,6 @@
     z-index: 4; 
     -webkit-clip-path: url(#maskCircle-servicos);
 }
-
-
-.active-servico {
-	color: #97FF66 !important;
-	font-size: 2rem !important;
-  }
   
   .active-servico-text {
 	opacity: 1 !important;
@@ -38,7 +32,7 @@
 .scrollDownVerde span {
 	width: 20px;
 	height: 20px;
-  display: block;
+	display: block;
 	border-right: 2px solid #ffffff;
 	border-bottom: 2px solid #ffffff;
 	transform: rotate(45deg);
@@ -64,5 +58,35 @@
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+/* Responsividade */
+
+.active-servico {
+	color: #97FF66 !important;
+	font-size: 4rem !important;
+  }
+
+.servicos-title{
+	color: grey; 
+	font-size: 3rem; 
+	font-weight: 1000; 
+	margin: 0; 
+	transition: 1s
+}
+
+@media screen and (max-width: 600px) {
+	.active-servico {
+		color: #97FF66 !important;
+		font-size: 2rem !important;
+	  }
+
+	.servicos-title{
+		color: grey; 
+		font-size: 1.5rem; 
+		font-weight: 1000; 
+		margin: 0; 
+		transition: 1s
 	}
 }

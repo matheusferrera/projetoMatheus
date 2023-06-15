@@ -41,3 +41,13 @@
     font-style: normal;
 
 }
+
+
+@font-face {
+    font-family: 'sliced';
+    src: url('SlicedTrial-MediumTitle.woff2') format('woff2'),
+         url('SlicedTrial-MediumTitle.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

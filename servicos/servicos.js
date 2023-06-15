@@ -21,9 +21,9 @@ function animacaoServ() {
   // Verifica se o scroll mudou significativamente antes de realizar as atualizações
   if (Math.abs(scroll - lastScroll) > 10) {
     
-    // Atualiza a posição do círculo SVG
-    console.log("entrou")
-    if (window.scrollY > 2000) {
+
+    // Animação para mobile
+    if (window.scrollY > 2000 && window.innerHeight < 1000) {
       const circleScroll = scroll - 2000;
       const circleCx = 50 + circleScroll / 3 + "vw";
       const circleCy = 50 + circleScroll / 3 + "vw";
@@ -38,13 +38,40 @@ function animacaoServ() {
       maskDivServicos.style.top = maskTop;
     } 
     
-    if(window.scrollY < 2000) {
+    if(window.scrollY < 2000 && window.innerHeight < 1000) {
       circleSvgServicos.setAttribute("cx", "50vw");
       circleSvgServicos.setAttribute("cy", "50vw");
       circleSvgServicos.setAttribute("r", "40vw");
 
       maskDivServicos.style.left = "0vw";
       maskDivServicos.style.top = "85vh";
+    }
+
+
+
+    // Animação para desktop
+    if (window.scrollY > 1000 && window.innerHeight > 1000) {
+      const circleScroll = scroll - 1000;
+      const circleCx = 50 + circleScroll / 3 + "vw";
+      const circleCy = 50 + circleScroll / 3 + "vw";
+      const circleR = 40 + circleScroll / 4 + "vw";
+      circleSvgServicos.setAttribute("cx", circleCx);
+      circleSvgServicos.setAttribute("cy", circleCy);
+      circleSvgServicos.setAttribute("r", circleR);
+
+      const maskLeft = 0 - (scroll - 1000) / 3 + "vw";
+      const maskTop = 75 - (scroll - 1000) / 5 + "vh";
+      maskDivServicos.style.left = maskLeft;
+      maskDivServicos.style.top = maskTop;
+    } 
+
+    if(window.scrollY < 1000 && window.innerHeight > 1000) {
+      circleSvgServicos.setAttribute("cx", "50vw");
+      circleSvgServicos.setAttribute("cy", "50vw");
+      circleSvgServicos.setAttribute("r", "40vw");
+
+      maskDivServicos.style.left = "0vw";
+      maskDivServicos.style.top = "75vh";
     }
 
     // Atualiza o estado dos serviços
