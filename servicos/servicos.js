@@ -66,6 +66,7 @@ function animacaoServ() {
     } 
 
     if(window.scrollY < 1000 && window.innerHeight > 1000) {
+      console.log("ESTAMOS NO DESKTOP ---> " + window.innerHeight)
       circleSvgServicos.setAttribute("cx", "50vw");
       circleSvgServicos.setAttribute("cy", "50vw");
       circleSvgServicos.setAttribute("r", "40vw");
