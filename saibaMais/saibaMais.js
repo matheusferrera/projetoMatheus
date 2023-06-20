@@ -15,8 +15,20 @@ function animacaoSaiba() {
 requestAnimationFrame(animacaoSaiba);
 
 
+$(window).on("mousemove touchmove", function (e) {
+    var event = e;
+    if (e.originalEvent && e.originalEvent.touches) {
+      event = e.originalEvent.touches[0];
+    }
+  
+    $(".background").css(
+      "background-position",
+      `calc(50% + ${(window.innerWidth / 2) - event.clientX}px * -1) calc(50% + ${(window.innerHeight / 2) - event.clientY}px * -1)`
+    );
+  });
+
     //Escrever palavras saibaMais
-    consoleText(['Crio experiências', 'Crio sentimentos', 'Crio conexões', 'Crio clientes', 'Crio obras de arte'], 'text',['black']);
+    consoleText(['sua ideia', 'seu projeto', 'seu sonho'], 'text',['black']);
 
     function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];

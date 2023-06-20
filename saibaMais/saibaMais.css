@@ -27,8 +27,49 @@
     z-index: 2;
     position: absolute; 
     color: white; 
-    width: 100%; height: 100%;
+    width: 100%; 
+    height: 100%;
 }
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #97FF66, #000000);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+  }
+  .background .gradient {
+    position: absolute;
+    top: calc(50% - 2rem);
+    left: calc(50% - 8rem);
+    transform: translate3d(-50%, -50%, 0);
+    width: 30rem;
+    height: 25rem;
+    background: radial-gradient(
+      circle at center,
+      rgb(225 199 98 / 16%),
+      rgba(28, 0, 37, 0) 10rem
+    );
+    filter: blur(20px);
+  }
+  .background .gradient-2 {
+    position: absolute;
+    top: calc(50% + 5rem);
+    left: calc(50% + 8rem);
+    transform: translate3d(-50%, -50%, 0);
+    width: 12rem;
+    height: 17rem;
+    background: radial-gradient(
+      circle at center,
+      rgb(33 165 123 / 16%),
+      rgba(28, 0, 37, 0) 10rem
+    );
+    filter: blur(20px);
+  }
 
 
 
@@ -98,11 +139,9 @@ opacity:0;
 
 .console-container {
     font-family:unique;
-    font-size:16vw;
-    font-size: max(150px);
-    text-align:center;
+    font-size:15vw;
+    font-size: max(100px);
     font-weight: 500;
-    width:100%;
     display:block;
     color:white;
     top:0;
@@ -110,15 +149,25 @@ opacity:0;
     left:0;
     right:0;
     margin:auto;
+    margin-left: 2vh;
+    width: max-content;
 }
 
+.text1-saibaMais{
+    width: max-content; 
+    display: flex; 
+    flex-direction: row;
+}
 
 .p1-saibaMais{
     font-size: 15vw; 
-    font-size: max(150px);
+    font-size: max(100px);
     color: black; 
     margin:0; 
-    text-align: center;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    
     font-weight: 500; 
     font-family: unique;
 }
@@ -126,6 +175,7 @@ opacity:0;
 @media screen and (max-width: 600px) {
     .p1-saibaMais{
         font-size: 10vh; 
+        line-height: 9vh;
         color: black; 
         margin:0; 
         text-align: center;
@@ -133,12 +183,21 @@ opacity:0;
         font-family: unique;
     }
 
+    .p2-saibaMais{
+        font-size: 3vh; 
+        line-height: 4.5vh;
+        color: black; 
+        text-align: center;
+        margin:0; 
+        margin-top: 2vh;
+        font-weight: 700; 
+    }
+
     .console-container {
         font-family:unique;
         font-size:10vh;
-        text-align:center;
+        line-height: 9vh;
         font-weight: 500;
-        width:100%;
         display:block;
         color:white;
         top:0;
@@ -146,5 +205,7 @@ opacity:0;
         left:0;
         right:0;
         margin:auto;
+        margin-left: 1.5vw;
+        width: max-content;
     }
 }

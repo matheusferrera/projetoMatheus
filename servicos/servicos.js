@@ -102,24 +102,25 @@ function animacaoServ() {
     //Caso PC
     else if(window.innerWidth >= 600){
     // Atualiza a posição do círculo SVG
+    
     console.log(window.scrollY)
     if (window.scrollY > 500) {
-      const circleScroll = 2*(scroll - 500);
-      const circleCx = 50 + (circleScroll / 3) + "vw";
-      const circleCy = 50 + (circleScroll / 3) + "vw";
-      const circleR = 40 + (circleScroll / 4) + "vw";
-      circleSvgServicos.setAttribute("cx", circleCx);
-      circleSvgServicos.setAttribute("cy", circleCy);
-      circleSvgServicos.setAttribute("r", circleR);
+      let circleScroll = 2*(scroll - 500);
+      let circleCx = 100 + (circleScroll / 3);
+      let circleCy = 100 + (circleScroll / 3);
+      let circleR = 80 + (circleScroll / 4);
+      circleSvgServicos.setAttribute("cx", circleCx + "vw");
+      circleSvgServicos.setAttribute("cy", circleCy + "vw");
+      circleSvgServicos.setAttribute("r", circleR + "vw");
     
       
-      const maskLeft = 0 - (circleScroll / 3) + "vw";
+      const maskLeft = -50 - (circleScroll / 3) + "vw";
       const maskTop = 70 - (circleScroll / 4) + "vh";
   
       maskDivServicos.style.left = maskLeft;
       maskDivServicos.style.top = maskTop;
 
-      console.log(circleCx + " ---- " + maskLeft)
+      console.log(circleCx + " ---- " + maskLeft +  " ------ " + maskTop)
     } 
     
     if(window.scrollY < 500) {
@@ -132,7 +133,7 @@ function animacaoServ() {
     }
 
     // Atualiza o estado dos serviços
-    if (window.scrollY > 2000 && window.scrollY < 3000) {
+    if (window.scrollY > 500 && window.scrollY < 1500) {
       servico1.classList.add(activeServicoClass);
       servico1.style.fontSize = "2rem";
       servico1Text.classList.add(activeServicoTextClass);
@@ -146,7 +147,7 @@ function animacaoServ() {
       servico3Text.classList.remove(activeServicoTextClass);
     } 
     
-    if (window.scrollY > 3000 && window.scrollY < 3300) {
+    if (window.scrollY > 1500 && window.scrollY < 2000) {
       servico1.classList.remove(activeServicoClass);
       servico1.style.fontSize = "1.5rem";
       servico1Text.classList.remove(activeServicoTextClass);
@@ -159,7 +160,7 @@ function animacaoServ() {
       servico3.style.fontSize = "1.5rem";
       servico3Text.classList.remove(activeServicoTextClass);
     } 
-    if (window.scrollY > 3300 && window.scrollY < 3600) {
+    if (window.scrollY > 2000 && window.scrollY < 2500) {
       servico1.classList.remove(activeServicoClass);
       servico1.style.fontSize = "1.5rem";
       servico1Text.classList.remove(activeServicoTextClass);
