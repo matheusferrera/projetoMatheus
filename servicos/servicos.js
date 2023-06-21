@@ -149,7 +149,7 @@ function animacaoServ() {
     // Atualiza a posição do círculo SVG
     
     console.log(window.scrollY)
-    if (window.scrollY > 700) {
+    if (window.scrollY > 700 && window.scrollY < 1500) {
       let circleScroll = 2*(scroll - 500);
       let circleCx = 100 + (circleScroll / 3);
       let circleCy = 100 + (circleScroll / 3);

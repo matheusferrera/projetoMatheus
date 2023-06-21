@@ -1,3 +1,29 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #171717;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #97FF66;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+
+
+
 .div-welcome{
     background-color: black;
     width: 100%; 
