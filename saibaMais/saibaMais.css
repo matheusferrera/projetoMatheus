@@ -208,6 +208,7 @@ opacity:0;
         margin-left: 1.5vw;
         width: max-content;
     }
+    
 }
 
 @media screen and (min-width: 1000px) {
@@ -246,4 +247,5 @@ opacity:0;
         margin-left: 1.5vw;
         width: max-content;
     }
+
 }

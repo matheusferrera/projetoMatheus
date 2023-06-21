@@ -7,6 +7,9 @@ const servico3 = document.getElementById("servico3");
 const servico1Text = document.getElementById("servico1-text");
 const servico2Text = document.getElementById("servico2-text");
 const servico3Text = document.getElementById("servico3-text");
+const contatoTitle = document.getElementById("contato-title");
+const contatoText = document.getElementById("contato-text");
+const contatoBotao = document.getElementById("contato-botao");
 
 // Define as classes CSS para aplicar as alterações de estilo
 const activeServicoClass = "active-servico";
@@ -49,6 +52,13 @@ function animacaoServ() {
 
       maskDivServicos.style.left = "0vw";
       maskDivServicos.style.top = "85vh";
+
+      servico1.style.opacity = "1";
+      servico2.style.opacity = "1";
+      servico3.style.opacity = "1";
+      contatoTitle.style.opacity = "0";
+      contatoText.style.opacity = "0";
+      contatoBotao.style.scale = "1";
     }
 
     // Atualiza o estado dos serviços
@@ -64,6 +74,14 @@ function animacaoServ() {
       servico3.classList.remove(activeServicoClass);
       servico3.style.fontSize = "1.5rem";
       servico3Text.classList.remove(activeServicoTextClass);
+
+      servico1.style.opacity = "1";
+      servico2.style.opacity = "1";
+      servico3.style.opacity = "1";
+      contatoTitle.style.opacity = "0";
+      contatoText.style.opacity = "0";
+      contatoBotao.style.scale = "1";
+
     } 
     
     if (window.scrollY > 3000 && window.scrollY < 3300) {
@@ -78,6 +96,14 @@ function animacaoServ() {
       servico3.classList.remove(activeServicoClass);
       servico3.style.fontSize = "1.5rem";
       servico3Text.classList.remove(activeServicoTextClass);
+
+      servico1.style.opacity = "1";
+      servico2.style.opacity = "1";
+      servico3.style.opacity = "1";
+      contatoTitle.style.opacity = "0";
+      contatoText.style.opacity = "0";
+      contatoBotao.style.scale = "1";
+
     } 
     if (window.scrollY > 3300 && window.scrollY < 3600) {
       servico1.classList.remove(activeServicoClass);
@@ -91,6 +117,24 @@ function animacaoServ() {
       servico3.classList.add(activeServicoClass);
       servico3.style.fontSize = "2rem";
       servico3Text.classList.add(activeServicoTextClass);
+    
+      servico1.style.opacity = "1";
+      servico2.style.opacity = "1";
+      servico3.style.opacity = "1";
+      contatoTitle.style.opacity = "0";
+      contatoText.style.opacity = "0";
+      contatoBotao.style.scale = "1";
+    }
+    
+    if (window.scrollY > 3600) {
+      servico1.style.opacity = "0";
+      servico2.style.opacity = "0";
+      servico3.style.opacity = "0";
+      servico3Text.classList.remove(activeServicoTextClass);
+      
+      contatoTitle.style.opacity = "1";
+      contatoText.style.opacity = "1";
+      contatoBotao.style.scale = "1.7";
     }
 
     // Atualiza o último valor de scroll
@@ -171,6 +215,24 @@ function animacaoServ() {
       servico3.classList.add(activeServicoClass);
       servico3.style.fontSize = "2rem";
       servico3Text.classList.add(activeServicoTextClass);
+
+      servico1.style.opacity = "1";
+      servico2.style.opacity = "1";
+      servico3.style.opacity = "1";
+      contatoTitle.style.opacity = "0";
+      contatoText.style.opacity = "0";
+      contatoBotao.style.scale = "1";
+    }
+    
+    if (window.scrollY > 3000) {
+      servico1.style.opacity = "0";
+      servico2.style.opacity = "0";
+      servico3.style.opacity = "0";
+      servico3Text.classList.remove(activeServicoTextClass);
+      
+      contatoTitle.style.opacity = "1";
+      contatoText.style.opacity = "1";
+      contatoBotao.style.scale = "2";
     }
 
     // Atualiza o último valor de scroll
