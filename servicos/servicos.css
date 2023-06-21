@@ -140,7 +140,7 @@
 	}
 
 	.div-servicos-content{
-		margin-top: 0vh;
+		margin-top: 10vh;
 		height: max-content;
 	}
 
@@ -154,8 +154,9 @@
         height: 0; 
         color: #97FF66; 
         opacity: 0; 
-        transition: 1s; 
-        margin-top: 10vh;
+		position: relative;
+        top: 0;
+		margin: 0;
     }
 
     #contato-text {
