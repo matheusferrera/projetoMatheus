@@ -105,7 +105,7 @@ function animacaoServ() {
     // Atualiza a posição do círculo SVG
     
     console.log(window.scrollY)
-    if (window.scrollY > 500) {
+    if (window.scrollY > 700) {
       let circleScroll = 2*(scroll - 500);
       let circleCx = 100 + (circleScroll / 3);
       let circleCy = 100 + (circleScroll / 3);
@@ -116,23 +116,23 @@ function animacaoServ() {
     
       
       const maskLeft = -50 - (circleScroll / 3) + "vw";
-      const maskTop = 70 - (circleScroll / 4) + "vh";
+      const maskTop = 45 - (circleScroll / 4) + "vh";
   
       maskDivServicos.style.left = maskLeft;
       maskDivServicos.style.top = maskTop;
     } 
     
-    if(window.scrollY < 500) {
-      circleSvgServicos.setAttribute("cx", "50vw");
-      circleSvgServicos.setAttribute("cy", "50vw");
-      circleSvgServicos.setAttribute("r", "40vw");
+    if(window.scrollY < 700) {
+      circleSvgServicos.setAttribute("cx", "100vw");
+      circleSvgServicos.setAttribute("cy", "100vw");
+      circleSvgServicos.setAttribute("r", "80vw");
 
-      maskDivServicos.style.left = "0vw";
-      maskDivServicos.style.top = "70vh";
+      maskDivServicos.style.left = "-50vw";
+      maskDivServicos.style.top = "45vh";
     }
 
     // Atualiza o estado dos serviços
-    if (window.scrollY > 500 && window.scrollY < 1500) {
+    if (window.scrollY > 700 && window.scrollY < 1500) {
       servico1.classList.add(activeServicoClass);
       servico1.style.fontSize = "2rem";
       servico1Text.classList.add(activeServicoTextClass);
