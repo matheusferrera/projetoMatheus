@@ -14,16 +14,21 @@ const vantaBG = VANTA.TRUNK({
   
   function animacao() {
     let scroll = window.scrollY;
-    vantaBG.setOptions({chaos: 2 + scroll/30, spacing: scroll/50});
-    vantaBG.resize();
     
     // Ajustar abertura do círculo da primeira página
-    document.getElementById("circleSvg-saibaMais").setAttribute("cx", scroll/5 + "vw");
-    document.getElementById("circleSvg-saibaMais").setAttribute("cy", scroll/5 + "vh");
-    document.getElementById("circleSvg-saibaMais").setAttribute("r", scroll/10 + "vw");
+    if(3 * window.innerHeight > scroll){
+
+      vantaBG.setOptions({chaos: 2 + scroll/30, spacing: scroll/50});
+      vantaBG.resize();
+
+      document.getElementById("circleSvg-saibaMais").setAttribute("cx", scroll/5 + "vw");
+      document.getElementById("circleSvg-saibaMais").setAttribute("cy", scroll/5 + "vh");
+      document.getElementById("circleSvg-saibaMais").setAttribute("r", scroll/10 + "vw");
+      
+      document.getElementById("maskDiv-saibaMais").style.left = (50 - (scroll/5)) + "vw";
+      document.getElementById("maskDiv-saibaMais").style.top = (80 - (scroll/5)) + "vh";
+    }
     
-    document.getElementById("maskDiv-saibaMais").style.left = (50 - (scroll/5)) + "vw";
-    document.getElementById("maskDiv-saibaMais").style.top = (80 - (scroll/5)) + "vh";
   
     requestAnimationFrame(animacao);
   }

@@ -26,7 +26,8 @@ function animacaoServ() {
 
     // Atualiza a posição do círculo SVG
     console.log("entrou")
-    if (window.scrollY > 2000) {
+    if (window.scrollY > 2000 && window.scrollY < 3000) {
+      console.log("ajustando a div de servicos")
       const circleScroll = scroll - 2000;
       const circleCx = 50 + circleScroll / 3 + "vw";
       const circleCy = 50 + circleScroll / 3 + "vw";
@@ -119,8 +120,6 @@ function animacaoServ() {
   
       maskDivServicos.style.left = maskLeft;
       maskDivServicos.style.top = maskTop;
-
-      console.log(circleCx + " ---- " + maskLeft +  " ------ " + maskTop)
     } 
     
     if(window.scrollY < 500) {

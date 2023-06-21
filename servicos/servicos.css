@@ -76,6 +76,15 @@
 	transition: 1s
 }
 
+@media screen and (min-width: 1000px) {
+	.div-servicos-content{
+		width: 50%;
+		position: relative;
+		left: 19%;
+	}
+
+}
+
 @media screen and (max-width: 600px) {
 	.active-servico {
 		color: #97FF66 !important;
