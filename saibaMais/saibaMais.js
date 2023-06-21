@@ -3,16 +3,6 @@ const widthTotal = window.innerWidth;
 const textCanva1 = document.querySelector("#text-canva1");
 const consoleTextTarget = document.getElementById("text");
 
-function animacaoSaiba() {
-    const scroll = window.scrollY;
-
-    // Animação de letras atrás do canvas
-    textCanva1.style.paddingRight = scroll + "vw";
-
-    requestAnimationFrame(animacaoSaiba);
-}
-
-requestAnimationFrame(animacaoSaiba);
 
 
 $(window).on("mousemove touchmove", function (e) {
